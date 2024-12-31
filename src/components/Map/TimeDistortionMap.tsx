@@ -241,10 +241,10 @@ export default function TimeDistortionMap() {
   const [gridDensity, setGridDensity] = useState(25)
   const [distortionFactor, setDistortionFactor] = useState(1)
   const [radius, setRadius] = useState(0.5)
-  const [circleRadius, setCircleRadius] = useState(50)
+  const [circleRadius, _setCircleRadius] = useState(50)
   const [animationProgress, setAnimationProgress] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
-  const [showControls, setShowControls] = useState(false)
+  const [showControls, _setShowControls] = useState(false)
   const [analysisMode, setAnalysisMode] = useState<AnalysisMode>('basic')
 
   useAnimationFrame(deltaTime => {

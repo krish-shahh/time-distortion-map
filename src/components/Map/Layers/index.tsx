@@ -2,7 +2,7 @@
 import { useMemo } from 'react'
 import { Circle, Polygon, LayerGroup } from 'react-leaflet'
 import * as turf from '@turf/turf'
-import L from 'leaflet'
+//import L from 'leaflet'
 
 interface LayerProps {
   points: {

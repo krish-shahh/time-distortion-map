@@ -1,6 +1,6 @@
 // src/components/Map/utils/distortion.ts
 import * as turf from '@turf/turf'
-import { matrix, multiply, transpose, inv } from 'mathjs'
+import { matrix, multiply } from 'mathjs'
 
 export interface GridPoint {
   id: string
@@ -48,9 +48,9 @@ export function distortPoints(
     H.set([i, i], H.get([i, i]) - 1/n)
   }
 
-  const B = multiply(multiply(multiply(-0.5, H), distanceMatrix), H)
-  const eigenvalues = []  // Would use proper eigendecomposition library here
-  const eigenvectors = [] // Placeholder for actual computation
+  //const B = multiply(multiply(multiply(-0.5, H), distanceMatrix), H)
+  //const eigenvalues = []  // Would use proper eigendecomposition library here
+  //const eigenvectors = [] // Placeholder for actual computation
 
   // For now, using a simpler distortion method
   return points.map((point, i) => {

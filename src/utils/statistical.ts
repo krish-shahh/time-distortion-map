@@ -1,6 +1,5 @@
 // src/utils/statistical.ts
 import * as turf from '@turf/turf';
-import * as d3 from 'd3';
 
 interface GridPoint {
   id: string;
