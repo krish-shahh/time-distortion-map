@@ -1,6 +1,6 @@
 // src/components/Map/utils/distortion.ts
 import * as turf from '@turf/turf'
-import { matrix, multiply } from 'mathjs'
+import { matrix } from 'mathjs'
 
 export interface GridPoint {
   id: string
@@ -37,9 +37,9 @@ export function distortPoints(
   timeMatrix: number[][]
 ): GridPoint[] {
   // Convert time matrix to distance matrix (assuming time in minutes)
-  const distanceMatrix = timeMatrix.map(row => 
-    row.map(time => Math.sqrt(time))
-  )
+//   const distanceMatrix = timeMatrix.map(row => 
+//     row.map(time => Math.sqrt(time))
+//   )
 
   // Classical MDS implementation
   const n = points.length

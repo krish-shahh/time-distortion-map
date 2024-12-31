@@ -11,11 +11,11 @@ import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 import * as turf from '@turf/turf'
 import { HeatmapLayer, NetworkLayer, IsochroneLayer } from './Layers'
-import { InfoTooltip } from '@/components/InfoTooltip'
+//import { InfoTooltip } from '@/components/InfoTooltip'
 import { Target } from 'lucide-react'
 
 // Fix Leaflet icon issues
-delete (L.Icon.Default.prototype as any)._getIconUrl
+//delete (L.Icon.Default.prototype as any)._getIconUrl
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/marker-icon-2x.png',
   iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/marker-icon.png',
@@ -241,10 +241,10 @@ export default function TimeDistortionMap() {
   const [gridDensity, setGridDensity] = useState(25)
   const [distortionFactor, setDistortionFactor] = useState(1)
   const [radius, setRadius] = useState(0.5)
-  const [circleRadius, _setCircleRadius] = useState(50)
+  const [circleRadius] = useState(50);
   const [animationProgress, setAnimationProgress] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
-  const [showControls, _setShowControls] = useState(false)
+  const [showControls] = useState(false);  
   const [analysisMode, setAnalysisMode] = useState<AnalysisMode>('basic')
 
   useAnimationFrame(deltaTime => {
@@ -632,7 +632,7 @@ export default function TimeDistortionMap() {
                   <h4 className="font-medium mb-2">How to Read This Map</h4>
                   <ul className="space-y-1 text-sm text-gray-600">
                     <li>• Blue dots show actual geographic locations</li>
-                    <li>• Red dots show where locations "&quot;feel&quot;" based on travel time</li>
+                    <li>• Red dots show where locations &quot;feel&quot; based on travel time</li>
                     <li>• Longer gray lines mean bigger differences between physical and time distance</li>
                     <li>• Click any blue dot to see exact travel time</li>
                     {analysisMode !== 'basic' && (
