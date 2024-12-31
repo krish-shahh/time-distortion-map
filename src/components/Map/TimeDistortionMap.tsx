@@ -632,7 +632,7 @@ export default function TimeDistortionMap() {
                   <h4 className="font-medium mb-2">How to Read This Map</h4>
                   <ul className="space-y-1 text-sm text-gray-600">
                     <li>• Blue dots show actual geographic locations</li>
-                    <li>• Red dots show where locations "feel" based on travel time</li>
+                    <li>• Red dots show where locations "&quot;feel&quot;" based on travel time</li>
                     <li>• Longer gray lines mean bigger differences between physical and time distance</li>
                     <li>• Click any blue dot to see exact travel time</li>
                     {analysisMode !== 'basic' && (
